@@ -12,18 +12,18 @@ struct BottomNavigationBar: View {
         TabView {
                 ProductManagerScreen()
                     .tabItem {
-                        Image(systemName: "heart.fill")
-                        Text("Favourites")
+                        Image(systemName: "tray.2.fill")
+                        Text("Storage")
                 }
                 Text("Friends Screen")
                     .tabItem {
-                        Image(systemName: "person.fill")
-                        Text("Friends")
+                        Image(systemName: "megaphone.fill")
+                        Text("Notification")
                 }
                 Text("Nearby Screen")
                     .tabItem {
-                        Image(systemName: "mappin.circle.fill")
-                        Text("Nearby")
+                        Image(systemName: "person.fill")
+                        Text("Profile")
                 }
             }
     }

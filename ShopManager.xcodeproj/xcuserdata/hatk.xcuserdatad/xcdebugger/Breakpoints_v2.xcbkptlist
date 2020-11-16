@@ -36,7 +36,7 @@
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "6A969B2C-E17C-4912-A84D-4544EEA0B6A8 - d988f24d406d9956"
+                  uuid = "6A969B2C-E17C-4912-A84D-4544EEA0B6A8 - d988f24d406d9935"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -46,24 +46,24 @@
                   urlString = "file:///Users/hatk/Desktop/ShopManager/ShopManager/View/ProductManager/Cell/ProductItemCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "480">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "376">
                </Location>
                <Location
-                  uuid = "6A969B2C-E17C-4912-A84D-4544EEA0B6A8 - 279a6d75aa1eafdf"
+                  uuid = "6A969B2C-E17C-4912-A84D-4544EEA0B6A8 - df1a74e6e278ce76"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.lineLimit(Swift.Optional&lt;Swift.Int&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt;&gt;, &lt;&lt;opaque return type of ShopManager.ProductItemCell.changeCountView : some&gt;&gt;.0)&gt; in ShopManager.ProductItemCell.body.getter : some"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.multilineTextAlignment(SwiftUI.TextAlignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of ShopManager.ProductItemCell.changeCountView : some&gt;&gt;.0)&gt; in ShopManager.ProductItemCell.body.getter : some"
                   moduleName = "ShopManager"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hatk/Desktop/ShopManager/ShopManager/View/ProductManager/Cell/ProductItemCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "508">
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "408">
                </Location>
             </Locations>
          </BreakpointContent>
