@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		237C2CBEB6C8BE72D94C2549 /* Pods_ShopManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2806E6EB74FACE2E89E41AAB /* Pods_ShopManager.framework */; };
+		4E1B893725627A150004CABC /* AddNewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B893625627A150004CABC /* AddNewProduct.swift */; };
+		4E1B893C256283CF0004CABC /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B893B256283CF0004CABC /* LogInView.swift */; };
 		4E7D5095255DA0CA0053BC9A /* ShopManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D5094255DA0CA0053BC9A /* ShopManagerApp.swift */; };
 		4E7D5099255DA0CB0053BC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D5098255DA0CB0053BC9A /* Assets.xcassets */; };
 		4E7D509C255DA0CB0053BC9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D509B255DA0CB0053BC9A /* Preview Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		2C95B5CB964E89B7BF790CF1 /* Pods-ShopManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopManager.debug.xcconfig"; path = "Target Support Files/Pods-ShopManager/Pods-ShopManager.debug.xcconfig"; sourceTree = "<group>"; };
 		37655D4B61ED74B25E167D1F /* Pods-ShopManager.release product.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopManager.release product.xcconfig"; path = "Target Support Files/Pods-ShopManager/Pods-ShopManager.release product.xcconfig"; sourceTree = "<group>"; };
 		46606E6FDAE9797F81284697 /* Pods-ShopManager.debug develop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopManager.debug develop.xcconfig"; path = "Target Support Files/Pods-ShopManager/Pods-ShopManager.debug develop.xcconfig"; sourceTree = "<group>"; };
+		4E1B893625627A150004CABC /* AddNewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProduct.swift; sourceTree = "<group>"; };
+		4E1B893B256283CF0004CABC /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		4E7D5091255DA0CA0053BC9A /* ShopManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7D5094255DA0CA0053BC9A /* ShopManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopManagerApp.swift; sourceTree = "<group>"; };
 		4E7D5098255DA0CB0053BC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +79,30 @@
 				2806E6EB74FACE2E89E41AAB /* Pods_ShopManager.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E1B893525627A000004CABC /* AddNewProduct */ = {
+			isa = PBXGroup;
+			children = (
+				4E1B893625627A150004CABC /* AddNewProduct.swift */,
+			);
+			path = AddNewProduct;
+			sourceTree = "<group>";
+		};
+		4E1B8939256283A70004CABC /* Authenticate */ = {
+			isa = PBXGroup;
+			children = (
+				4E1B893A256283B80004CABC /* Login */,
+			);
+			path = Authenticate;
+			sourceTree = "<group>";
+		};
+		4E1B893A256283B80004CABC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4E1B893B256283CF0004CABC /* LogInView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		4E7D5088255DA0CA0053BC9A = {
@@ -130,6 +158,7 @@
 		4E7D50AB255DA3910053BC9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E1B8939256283A70004CABC /* Authenticate */,
 				4E7D50AE255DA3AE0053BC9A /* ProductManager */,
 			);
 			path = View;
@@ -146,6 +175,7 @@
 		4E7D50AE255DA3AE0053BC9A /* ProductManager */ = {
 			isa = PBXGroup;
 			children = (
+				4E1B893525627A000004CABC /* AddNewProduct */,
 				4E7D50B3255DA41C0053BC9A /* Cell */,
 				4E7D50AF255DA3F70053BC9A /* ProductManagerScreen.swift */,
 			);
@@ -339,9 +369,11 @@
 			files = (
 				4E7D50BA255DA4DB0053BC9A /* ProductItemModel.swift in Sources */,
 				4EB76E9C256192A600B1A8B7 /* IncreaseQuantityButton.swift in Sources */,
+				4E1B893725627A150004CABC /* AddNewProduct.swift in Sources */,
 				4E7D50A9255DA2AF0053BC9A /* BottomNavigationBar.swift in Sources */,
 				4E7D50B5255DA4320053BC9A /* ProductItemCell.swift in Sources */,
 				4E7D50B0255DA3F70053BC9A /* ProductManagerScreen.swift in Sources */,
+				4E1B893C256283CF0004CABC /* LogInView.swift in Sources */,
 				4EB76E9525618E1300B1A8B7 /* View+Extension.swift in Sources */,
 				4E7D5095255DA0CA0053BC9A /* ShopManagerApp.swift in Sources */,
 			);
