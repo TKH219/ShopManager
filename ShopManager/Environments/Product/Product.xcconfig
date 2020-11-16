@@ -1,0 +1,11 @@
+//
+//  Product.xcconfig
+//  ShopManager
+//
+//  Created by Trần Khánh Hà on 11/16/20.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+APP_CONFIG_BUNDLE_NAME = Shop Manager Prod
+APP_CONFIG_PATH = Environments/Product/Config.plist
