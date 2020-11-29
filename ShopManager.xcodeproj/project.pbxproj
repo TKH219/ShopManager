@@ -19,6 +19,7 @@
 		4E7D50BA255DA4DB0053BC9A /* ProductItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D50B9255DA4DB0053BC9A /* ProductItemModel.swift */; };
 		4EB76E9525618E1300B1A8B7 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB76E9425618E1300B1A8B7 /* View+Extension.swift */; };
 		4EB76E9C256192A600B1A8B7 /* IncreaseQuantityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB76E9B256192A600B1A8B7 /* IncreaseQuantityButton.swift */; };
+		4EC161FD2563A1BE0006C712 /* ProductDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC161FC2563A1BE0006C712 /* ProductDetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		4EB76EA525623CE800B1A8B7 /* Product.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Product.xcconfig; sourceTree = "<group>"; };
 		4EB76EA625623D3C00B1A8B7 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		4EB76EA925623D4800B1A8B7 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		4EC161FC2563A1BE0006C712 /* ProductDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailScreen.swift; sourceTree = "<group>"; };
 		C64DC9DD33256BEE7798FDC2 /* Pods-ShopManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopManager.release.xcconfig"; path = "Target Support Files/Pods-ShopManager/Pods-ShopManager.release.xcconfig"; sourceTree = "<group>"; };
 		CE560B03101618752CCC7854 /* Pods-ShopManager.release develop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopManager.release develop.xcconfig"; path = "Target Support Files/Pods-ShopManager/Pods-ShopManager.release develop.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +177,7 @@
 		4E7D50AE255DA3AE0053BC9A /* ProductManager */ = {
 			isa = PBXGroup;
 			children = (
+				4EC161FB2563A1AA0006C712 /* ProductDetail */,
 				4E1B893525627A000004CABC /* AddNewProduct */,
 				4E7D50B3255DA41C0053BC9A /* Cell */,
 				4E7D50AF255DA3F70053BC9A /* ProductManagerScreen.swift */,
@@ -232,6 +235,14 @@
 				4EB76EA625623D3C00B1A8B7 /* Config.plist */,
 			);
 			path = Product;
+			sourceTree = "<group>";
+		};
+		4EC161FB2563A1AA0006C712 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4EC161FC2563A1BE0006C712 /* ProductDetailScreen.swift */,
+			);
+			path = ProductDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC161FD2563A1BE0006C712 /* ProductDetailScreen.swift in Sources */,
 				4E7D50BA255DA4DB0053BC9A /* ProductItemModel.swift in Sources */,
 				4EB76E9C256192A600B1A8B7 /* IncreaseQuantityButton.swift in Sources */,
 				4E1B893725627A150004CABC /* AddNewProduct.swift in Sources */,

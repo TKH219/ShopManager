@@ -11,42 +11,80 @@ typealias ChangeCountCallBack = (_ count: String) -> Void
 struct IncreaseQuantityButton: View {
     @State var count: Int = 0
     var changeCount: ChangeCountCallBack!
-    init(count: Int, _ changeCount: ChangeCountCallBack?) {
-        self.count = count
+    var countInit: Int
+    init(countNumber: Int, _ changeCount: ChangeCountCallBack?) {
         self.changeCount = changeCount
+        self.countInit = countNumber
     }
     
     var body: some View {
-        HStack(spacing: 10.0) {
-            Button(action: {
+        VStack(alignment: HorizontalAlignment.trailing) {
+            HStack(alignment: VerticalAlignment.center, spacing: 10) {
+                plusButton
+                textFieldForNumber
+                minusButton
+            }
+        }
+        .onAppear(){
+            viewAppear()
+        }
+    }
+    
+    func viewAppear() {
+        self.count = countInit
+    }
+    
+    var textFieldForNumber: some View {
+        TextField("\(String.init(self.count))", text: Binding(get: {
+            String.init(self.count)
+        }, set: { (text) in
+            self.count = Int.init(text) ?? 0
+            if let changeCount = self.changeCount {
+                changeCount(text)
+            }
+        }))
+        .keyboardType(.phonePad)
+        .padding(.vertical, 5)
+        .textFieldStyle(RoundedBorderTextFieldStyle())
+    }
+    
+    var plusButton: some View {
+        Button(
+            action: {
                 self.count += 1
                 if let changeCount = self.changeCount {
                     changeCount(String.init(count))
                 }
             }, label: {
-                HStack(spacing: 10.0){
-                    Image(systemName: "plus")
-                }
-            }).buttonStyle(PlainButtonStyle())
-            Spacer()
-            TextField("\(String.init(self.count))", text: Binding(get: {
-                String.init(self.count)
-            }, set: { (text) in
-                if let changeCount = self.changeCount {
-                    changeCount(text)
-                }
-            })).keyboardType(.phonePad)
-            
-            Button(action: {
+                Image(systemName: "plus")
+                    .foregroundColor(.red)
+                    .padding(.all, 12)
+                    .frame(width: 40, height: 40, alignment: .center)
+//                    .overlay(
+//                        RoundedRectangle(cornerRadius: 20)
+//                            .stroke(Color.red, lineWidth: 1))
+                
+            })
+            .buttonStyle(PlainButtonStyle())
+        
+    }
+    
+    var minusButton: some View {
+        Button(
+            action: {
                 self.count -= 1
                 if let changeCount = self.changeCount {
                     changeCount(String.init(count))
                 }
             }, label: {
-                HStack(spacing: 10.0){
-                    Image(systemName: "minus")
-                }
-            }).buttonStyle(PlainButtonStyle())
-        }.padding(EdgeInsets(top: 10.0, leading: 0.0, bottom: 10.0, trailing: 16.0))
+                Image(systemName: "minus")
+                    .foregroundColor(.red)
+                    .padding(.all, 12)
+                    .frame(width: 40, height: 40, alignment: .center)
+//                    .overlay(
+//                        RoundedRectangle(cornerRadius: 20)
+//                            .stroke(Color.red, lineWidth: 1))
+            })
+            .buttonStyle(PlainButtonStyle())
     }
 }
