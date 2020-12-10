@@ -7,5 +7,7 @@ target 'ShopManager' do
 
   # Pods for ShopManager
   pod 'IQKeyboardManagerSwift'
-
+  pod 'Realm'
+  pod 'RealmSwift'
+  pod 'Firebase/Analytics'
 end

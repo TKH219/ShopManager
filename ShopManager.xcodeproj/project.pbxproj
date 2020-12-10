@@ -10,6 +10,8 @@
 		237C2CBEB6C8BE72D94C2549 /* Pods_ShopManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2806E6EB74FACE2E89E41AAB /* Pods_ShopManager.framework */; };
 		4E1B893725627A150004CABC /* AddNewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B893625627A150004CABC /* AddNewProduct.swift */; };
 		4E1B893C256283CF0004CABC /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B893B256283CF0004CABC /* LogInView.swift */; };
+		4E5F9B1E25800193007EE996 /* ProductManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5F9B1D25800193007EE996 /* ProductManagerViewModel.swift */; };
+		4E6FAB80257F21510097C395 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6FAB7F257F21510097C395 /* Spinner.swift */; };
 		4E7D5095255DA0CA0053BC9A /* ShopManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D5094255DA0CA0053BC9A /* ShopManagerApp.swift */; };
 		4E7D5099255DA0CB0053BC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D5098255DA0CB0053BC9A /* Assets.xcassets */; };
 		4E7D509C255DA0CB0053BC9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D509B255DA0CB0053BC9A /* Preview Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		46606E6FDAE9797F81284697 /* Pods-ShopManager.debug develop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopManager.debug develop.xcconfig"; path = "Target Support Files/Pods-ShopManager/Pods-ShopManager.debug develop.xcconfig"; sourceTree = "<group>"; };
 		4E1B893625627A150004CABC /* AddNewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProduct.swift; sourceTree = "<group>"; };
 		4E1B893B256283CF0004CABC /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		4E5F9B1D25800193007EE996 /* ProductManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManagerViewModel.swift; sourceTree = "<group>"; };
+		4E6FAB7F257F21510097C395 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		4E7D5091255DA0CA0053BC9A /* ShopManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7D5094255DA0CA0053BC9A /* ShopManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopManagerApp.swift; sourceTree = "<group>"; };
 		4E7D5098255DA0CB0053BC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +111,23 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		4E6FAB7D257F20890097C395 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4E1B8939256283A70004CABC /* Authenticate */,
+				4E7D50AE255DA3AE0053BC9A /* ProductManager */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4E6FAB7E257F213F0097C395 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4E6FAB7F257F21510097C395 /* Spinner.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		4E7D5088255DA0CA0053BC9A = {
 			isa = PBXGroup;
 			children = (
@@ -128,9 +149,10 @@
 		4E7D5093255DA0CA0053BC9A /* ShopManager */ = {
 			isa = PBXGroup;
 			children = (
+				4E6FAB7E257F213F0097C395 /* Utils */,
+				4E6FAB7D257F20890097C395 /* Features */,
 				4EB76EA025623A1400B1A8B7 /* Environments */,
 				4EB76E9325618DED00B1A8B7 /* Extensions */,
-				4E7D50AB255DA3910053BC9A /* View */,
 				4E7D50AD255DA39F0053BC9A /* Model */,
 				4E7D50A4255DA1260053BC9A /* Home */,
 				4E7D5094255DA0CA0053BC9A /* ShopManagerApp.swift */,
@@ -157,15 +179,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		4E7D50AB255DA3910053BC9A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4E1B8939256283A70004CABC /* Authenticate */,
-				4E7D50AE255DA3AE0053BC9A /* ProductManager */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		4E7D50AD255DA39F0053BC9A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +194,7 @@
 				4E1B893525627A000004CABC /* AddNewProduct */,
 				4E7D50B3255DA41C0053BC9A /* Cell */,
 				4E7D50AF255DA3F70053BC9A /* ProductManagerScreen.swift */,
+				4E5F9B1D25800193007EE996 /* ProductManagerViewModel.swift */,
 			);
 			path = ProductManager;
 			sourceTree = "<group>";
@@ -378,9 +392,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6FAB80257F21510097C395 /* Spinner.swift in Sources */,
 				4EC161FD2563A1BE0006C712 /* ProductDetailScreen.swift in Sources */,
 				4E7D50BA255DA4DB0053BC9A /* ProductItemModel.swift in Sources */,
 				4EB76E9C256192A600B1A8B7 /* IncreaseQuantityButton.swift in Sources */,
+				4E5F9B1E25800193007EE996 /* ProductManagerViewModel.swift in Sources */,
 				4E1B893725627A150004CABC /* AddNewProduct.swift in Sources */,
 				4E7D50A9255DA2AF0053BC9A /* BottomNavigationBar.swift in Sources */,
 				4E7D50B5255DA4320053BC9A /* ProductItemCell.swift in Sources */,
