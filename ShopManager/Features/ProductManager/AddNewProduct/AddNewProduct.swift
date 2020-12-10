@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct AddNewProduct: View {
-    @State var productItemModel: ProductItemModel = ProductItemModel()
+    @ObservedObject var viewModel: AddNewProductViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var onAddProductItem: (ProductItemModel) -> ()?
     
     init(_ onAddProductItem: @escaping (ProductItemModel)->()) {
+        self.viewModel = AddNewProductViewModel()
         self.onAddProductItem = onAddProductItem
     }
     
@@ -23,7 +24,7 @@ struct AddNewProduct: View {
                 UITableView.appearance().separatorStyle = .none
             }
             .navigationBarItems(trailing: Button(action: {
-                self.onAddProductItem(self.productItemModel)
+                self.onAddProductItem(self.viewModel.productItemModel)
                 self.presentationMode.wrappedValue.dismiss()
             }, label: {
                 Text("Done")
@@ -35,19 +36,21 @@ struct AddNewProduct: View {
         ScrollView(.vertical) {
             VStack(alignment: HorizontalAlignment.leading) {
                 InputFormView(title: "Product name:",
-                              initText: self.productItemModel.productName,
+                              initText: self.viewModel.productItemModel.productName,
                               placeHolder: "Enter product name",
                               { (value) in
-                                self.productItemModel.productName = value
+                                self.viewModel.productItemModel.productName = value
                               })
                 countView
                 originalPriceView
-                InputFormView(title: "Description:",
-                              initText: self.productItemModel.productDescription,
-                              placeHolder: "Enter description",
-                              { (value) in
-                                self.productItemModel.productDescription = value
-                              })
+                Section(header: Text("Description")) {
+                    InputFormView(title: "Description:",
+                                  initText: self.viewModel.productItemModel.productDescription,
+                                  placeHolder: "Enter description",
+                                  { (value) in
+                                    self.viewModel.productItemModel.productDescription = value
+                                  })
+                }
             }
         }
     }
@@ -56,10 +59,10 @@ struct AddNewProduct: View {
         HStack(alignment: VerticalAlignment.center) {
             Text("Count:")
                 .padding(.zero)
-            TextField(getInitText(textInit: self.productItemModel.getCount(), placeHolder: "Enter count"), text: Binding(get: {
-                self.productItemModel.getCount()
+            TextField(getInitText(textInit: self.viewModel.productItemModel.getCount(), placeHolder: "Enter count"), text: Binding(get: {
+                self.viewModel.productItemModel.getCount()
             }, set: { (value) in
-                self.productItemModel.setCount(count: value)
+                self.viewModel.productItemModel.setCount(count: value)
             }))
             .multilineTextAlignment(.trailing)
             .keyboardType(.phonePad)
@@ -72,10 +75,10 @@ struct AddNewProduct: View {
         HStack(alignment: VerticalAlignment.center) {
             Text("Original Price:")
                 .padding(.zero)
-            TextField(getInitText(textInit: self.productItemModel.getOriginalPrice(), placeHolder: "Enter original price"), text: Binding(get: {
-                self.productItemModel.getOriginalPrice()
+            TextField(getInitText(textInit: self.viewModel.productItemModel.getOriginalPrice(), placeHolder: "Enter original price"), text: Binding(get: {
+                self.viewModel.productItemModel.getOriginalPrice()
             }, set: { (value) in
-                self.productItemModel.setOriginalPrice(price: value)
+                self.viewModel.productItemModel.setOriginalPrice(price: value)
             }))
             .multilineTextAlignment(.trailing)
             .keyboardType(.decimalPad)

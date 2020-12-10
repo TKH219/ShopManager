@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProductManagerViewModel: ObservableObject, Identifiable {
+class ProductManagerViewModel: BaseViewModel {
     @Published var listData: [ProductItemModel] = [
         ProductItemModel(productName: "Hello", count: 19, description: "This is description", originalPrice: 90000),
     ]
