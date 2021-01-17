@@ -5,11 +5,16 @@
 //  Created by Trần Khánh Hà on 12/9/20.
 //
 
-import Foundation
+import RealmSwift
 
 class ProductManagerViewModel: BaseViewModel {
-    @Published var listData: [ProductItemModel] = [
-        ProductItemModel(productName: "Hello", count: 19, description: "This is description", originalPrice: 90000),
-    ]
+    var listData: [ProductItemModel] {
+        dataFromRealm.map(ProductItemModel.init)
+    }
+
+    var dataFromRealm: Results<ProductItemRealmModel>
     
+    override init() {
+        dataFromRealm = RealmStore.sharedInstance.realm.objects(ProductItemRealmModel.self)
+    }
 }

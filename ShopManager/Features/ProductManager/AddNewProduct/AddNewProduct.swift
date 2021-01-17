@@ -9,56 +9,70 @@ import SwiftUI
 
 struct AddNewProduct: View {
     @ObservedObject var viewModel: AddNewProductViewModel
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.presentationMode) var presentationMode
     var onAddProductItem: (ProductItemModel) -> ()?
     
-    init(_ onAddProductItem: @escaping (ProductItemModel)->()) {
-        self.viewModel = AddNewProductViewModel()
+    init(model: ProductItemModel, _ onAddProductItem: @escaping (ProductItemModel)->()) {
+        self.viewModel = AddNewProductViewModel(model: model)
         self.onAddProductItem = onAddProductItem
     }
     
     var body: some View {
-        contentView
-            .padding(.all, 16.0)
-            .onAppear(){
-                UITableView.appearance().separatorStyle = .none
-            }
-            .navigationBarItems(trailing: Button(action: {
-                self.onAddProductItem(self.viewModel.productItemModel)
-                self.presentationMode.wrappedValue.dismiss()
-            }, label: {
-                Text("Done")
-            }))
-            .navigationBarTitleDisplayMode(.inline)
+        NavigationView{
+            contentView
+                .padding(.all, 16.0)
+                .navigationBarTitle("Product Item", displayMode: .inline)
+                .navigationBarItems(
+                    leading: Button("Cancel", action: dismissView),
+                    trailing: Button("Done", action: {
+                        self.viewModel.onTapDoneButton()
+                        self.dismissView()
+                    }))
+        }
     }
     
     var contentView: some View {
-        ScrollView(.vertical) {
-            VStack(alignment: HorizontalAlignment.leading) {
-                InputFormView(title: "Product name:",
-                              initText: self.viewModel.productItemModel.productName,
-                              placeHolder: "Enter product name",
+        Form {
+            InputFormView(title: "Product name",
+                          initText: self.viewModel.productItemModel.productName,
+                          placeHolder: "Enter product name",
+                          { (value) in
+                            self.viewModel.productItemModel.productName = value
+                          })
+            countView
+            originalPriceView
+            Section(header: Text("Description 📝")) {
+                InputFormView(title: "Description:",
+                              initText: self.viewModel.productItemModel.productDescription,
+                              placeHolder: "Enter description",
                               { (value) in
-                                self.viewModel.productItemModel.productName = value
+                                self.viewModel.productItemModel.productDescription = value
                               })
-                countView
-                originalPriceView
-                Section(header: Text("Description")) {
-                    InputFormView(title: "Description:",
-                                  initText: self.viewModel.productItemModel.productDescription,
-                                  placeHolder: "Enter description",
-                                  { (value) in
-                                    self.viewModel.productItemModel.productDescription = value
-                                  })
-                }
             }
         }
+        
+    }
+    
+    
+    
+    func getInitText(textInit: String, placeHolder: String) -> String {
+        if (textInit.isEmpty) {
+            return placeHolder
+        }
+        
+        return textInit
+    }
+}
+
+private extension AddNewProduct {
+    
+    func dismissView() {
+        self.presentationMode.wrappedValue.dismiss()
     }
     
     var countView: some View {
         HStack(alignment: VerticalAlignment.center) {
-            Text("Count:")
-                .padding(.zero)
+            Text("Count:").padding(.zero)
             TextField(getInitText(textInit: self.viewModel.productItemModel.getCount(), placeHolder: "Enter count"), text: Binding(get: {
                 self.viewModel.productItemModel.getCount()
             }, set: { (value) in
@@ -70,6 +84,7 @@ struct AddNewProduct: View {
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
         }
     }
+    
     
     var originalPriceView: some View {
         HStack(alignment: VerticalAlignment.center) {
@@ -85,14 +100,6 @@ struct AddNewProduct: View {
             .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 10))
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
         }
-    }
-    
-    func getInitText(textInit: String, placeHolder: String) -> String {
-        if (textInit.isEmpty) {
-            return placeHolder
-        }
-        
-        return textInit
     }
 }
 
@@ -138,3 +145,9 @@ struct InputFormView: View {
         return self.initText ?? ""
     }
 }
+struct AddNewProduct_Previews: PreviewProvider {
+    static var previews: some View {
+        AddNewProduct(model: ProductItemModel(), { model in print("")})
+        }
+    }
+

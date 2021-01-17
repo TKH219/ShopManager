@@ -11,12 +11,12 @@ import Combine
 struct ProductManagerScreen: View {
     
     @ObservedObject var viewModel: ProductManagerViewModel
+    @State var isPushToAddNewProduct: Bool = false
     
     init() {
         self.viewModel = ProductManagerViewModel()
     }
     
-    @State var isPushToAddNewProduct: Bool = false
     var body: some View {
         NavigationView {
             VStack {
@@ -24,7 +24,17 @@ struct ProductManagerScreen: View {
                     ForEach(self.viewModel.listData) { item in
                         ProductItemCell(model: item)
                             .padding(.zero)
+                            .onTapGesture(perform: {
+                                isPushToAddNewProduct = true
+                            })
+                            .sheet(isPresented: $isPushToAddNewProduct) {
+                                AddNewProduct(model: item){ model in
+                                    isPushToAddNewProduct = false
+                    //                RealmStore.sharedInstance.createProduct(model: model)
+                                }
+                            }
                     }
+                    
                     .onDelete { (index) in
                         print("onDelete")
                     }
@@ -37,7 +47,8 @@ struct ProductManagerScreen: View {
     }
 }
 
-private extension ProductManagerScreen {
+extension ProductManagerScreen {
+    
     var addButton: some View {
         Button(action: {
             isPushToAddNewProduct = true
@@ -45,11 +56,16 @@ private extension ProductManagerScreen {
             HStack(spacing: 10.0){
                 Image(systemName: "plus")
                 Text("Add")
-                NavigationLink(destination: AddNewProduct(){
-                    (model) in self.viewModel.listData.append(model)
-                }, isActive: $isPushToAddNewProduct) { EmptyView() }
+//                NavigationLink(destination: AddNewProduct(){ model in
+//                    RealmStore.sharedInstance.createProduct(model: model)
+//                }, isActive: $isPushToAddNewProduct) { EmptyView() }
             }
-        })
+        }).sheet(isPresented: $isPushToAddNewProduct) {
+            AddNewProduct(model: ProductItemModel()){ model in
+                isPushToAddNewProduct = false
+//                RealmStore.sharedInstance.createProduct(model: model)
+            }
+        }
     }
     
     var emptySection: some View {
@@ -57,5 +73,11 @@ private extension ProductManagerScreen {
         Text("No results")
           .foregroundColor(.gray)
       }
+    }
+}
+
+struct ProductManagerScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        ProductManagerScreen()
     }
 }

@@ -10,6 +10,11 @@
 		237C2CBEB6C8BE72D94C2549 /* Pods_ShopManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2806E6EB74FACE2E89E41AAB /* Pods_ShopManager.framework */; };
 		4E1B893725627A150004CABC /* AddNewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B893625627A150004CABC /* AddNewProduct.swift */; };
 		4E1B893C256283CF0004CABC /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B893B256283CF0004CABC /* LogInView.swift */; };
+		4E1EDA7B2590A14B00396485 /* PurchaseHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EDA7A2590A14B00396485 /* PurchaseHistoryView.swift */; };
+		4E1EDA7E2590A22C00396485 /* PurchaseHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EDA7D2590A22C00396485 /* PurchaseHistoryViewModel.swift */; };
+		4E1EDA822590AA6900396485 /* StorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EDA812590AA6900396485 /* StorageModel.swift */; };
+		4E1EDA872590AB1200396485 /* TransactionHistoryItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EDA862590AB1200396485 /* TransactionHistoryItemModel.swift */; };
+		4E53E3EF2584792A00293391 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E53E3EE2584792A00293391 /* RealmStore.swift */; };
 		4E5F9B1E25800193007EE996 /* ProductManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5F9B1D25800193007EE996 /* ProductManagerViewModel.swift */; };
 		4E6FAB80257F21510097C395 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6FAB7F257F21510097C395 /* Spinner.swift */; };
 		4E7D5095255DA0CA0053BC9A /* ShopManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D5094255DA0CA0053BC9A /* ShopManagerApp.swift */; };
@@ -21,9 +26,11 @@
 		4E7D50BA255DA4DB0053BC9A /* ProductItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D50B9255DA4DB0053BC9A /* ProductItemModel.swift */; };
 		4EB76E9525618E1300B1A8B7 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB76E9425618E1300B1A8B7 /* View+Extension.swift */; };
 		4EB76E9C256192A600B1A8B7 /* IncreaseQuantityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB76E9B256192A600B1A8B7 /* IncreaseQuantityButton.swift */; };
-		4EC161FD2563A1BE0006C712 /* ProductDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC161FC2563A1BE0006C712 /* ProductDetailScreen.swift */; };
+		4ECC678025B41F4B00E0F2A3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECC677F25B41F4B00E0F2A3 /* BaseView.swift */; };
 		4EDFBB412582160600F5FBE1 /* AddNewProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFBB402582160600F5FBE1 /* AddNewProductViewModel.swift */; };
 		4EDFBB452582162400F5FBE1 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDFBB442582162400F5FBE1 /* BaseViewModel.swift */; };
+		4EF413B22597000B00EE3F93 /* TransactionHistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF413B12597000B00EE3F93 /* TransactionHistoryItem.swift */; };
+		4EF413B92597040100EE3F93 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF413B82597040100EE3F93 /* TransactionDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +39,14 @@
 		2C95B5CB964E89B7BF790CF1 /* Pods-ShopManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopManager.debug.xcconfig"; path = "Target Support Files/Pods-ShopManager/Pods-ShopManager.debug.xcconfig"; sourceTree = "<group>"; };
 		37655D4B61ED74B25E167D1F /* Pods-ShopManager.release product.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopManager.release product.xcconfig"; path = "Target Support Files/Pods-ShopManager/Pods-ShopManager.release product.xcconfig"; sourceTree = "<group>"; };
 		46606E6FDAE9797F81284697 /* Pods-ShopManager.debug develop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopManager.debug develop.xcconfig"; path = "Target Support Files/Pods-ShopManager/Pods-ShopManager.debug develop.xcconfig"; sourceTree = "<group>"; };
+		4E1611EB25B17C2600A05E16 /* ShopManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShopManager.entitlements; sourceTree = "<group>"; };
 		4E1B893625627A150004CABC /* AddNewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProduct.swift; sourceTree = "<group>"; };
 		4E1B893B256283CF0004CABC /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		4E1EDA7A2590A14B00396485 /* PurchaseHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHistoryView.swift; sourceTree = "<group>"; };
+		4E1EDA7D2590A22C00396485 /* PurchaseHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHistoryViewModel.swift; sourceTree = "<group>"; };
+		4E1EDA812590AA6900396485 /* StorageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageModel.swift; sourceTree = "<group>"; };
+		4E1EDA862590AB1200396485 /* TransactionHistoryItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryItemModel.swift; sourceTree = "<group>"; };
+		4E53E3EE2584792A00293391 /* RealmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
 		4E5F9B1D25800193007EE996 /* ProductManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManagerViewModel.swift; sourceTree = "<group>"; };
 		4E6FAB7F257F21510097C395 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		4E7D5091255DA0CA0053BC9A /* ShopManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,9 +64,11 @@
 		4EB76EA525623CE800B1A8B7 /* Product.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Product.xcconfig; sourceTree = "<group>"; };
 		4EB76EA625623D3C00B1A8B7 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		4EB76EA925623D4800B1A8B7 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
-		4EC161FC2563A1BE0006C712 /* ProductDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailScreen.swift; sourceTree = "<group>"; };
+		4ECC677F25B41F4B00E0F2A3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		4EDFBB402582160600F5FBE1 /* AddNewProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProductViewModel.swift; sourceTree = "<group>"; };
 		4EDFBB442582162400F5FBE1 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		4EF413B12597000B00EE3F93 /* TransactionHistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryItem.swift; sourceTree = "<group>"; };
+		4EF413B82597040100EE3F93 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		C64DC9DD33256BEE7798FDC2 /* Pods-ShopManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopManager.release.xcconfig"; path = "Target Support Files/Pods-ShopManager/Pods-ShopManager.release.xcconfig"; sourceTree = "<group>"; };
 		CE560B03101618752CCC7854 /* Pods-ShopManager.release develop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopManager.release develop.xcconfig"; path = "Target Support Files/Pods-ShopManager/Pods-ShopManager.release develop.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,9 +131,46 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		4E1EDA772590A0A500396485 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				4EF413B7259703E200EE3F93 /* Transaction Detail */,
+				4EF413B02596FFF600EE3F93 /* Custom Cell */,
+				4E1EDA782590A0EC00396485 /* Purchase History */,
+			);
+			path = Purchase;
+			sourceTree = "<group>";
+		};
+		4E1EDA782590A0EC00396485 /* Purchase History */ = {
+			isa = PBXGroup;
+			children = (
+				4E1EDA7A2590A14B00396485 /* PurchaseHistoryView.swift */,
+				4E1EDA7D2590A22C00396485 /* PurchaseHistoryViewModel.swift */,
+			);
+			path = "Purchase History";
+			sourceTree = "<group>";
+		};
+		4E1EDA852590AAF900396485 /* Transaction History */ = {
+			isa = PBXGroup;
+			children = (
+				4E1EDA862590AB1200396485 /* TransactionHistoryItemModel.swift */,
+			);
+			path = "Transaction History";
+			sourceTree = "<group>";
+		};
+		4E53E3ED2584791400293391 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				4E53E3EE2584792A00293391 /* RealmStore.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		4E6FAB7D257F20890097C395 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				4ECC677E25B41F3A00E0F2A3 /* Base */,
+				4E1EDA772590A0A500396485 /* Purchase */,
 				4E1B8939256283A70004CABC /* Authenticate */,
 				4E7D50AE255DA3AE0053BC9A /* ProductManager */,
 			);
@@ -154,6 +206,7 @@
 		4E7D5093255DA0CA0053BC9A /* ShopManager */ = {
 			isa = PBXGroup;
 			children = (
+				4E1611EB25B17C2600A05E16 /* ShopManager.entitlements */,
 				4EDFBB432582161600F5FBE1 /* Base */,
 				4E6FAB7E257F213F0097C395 /* Utils */,
 				4E6FAB7D257F20890097C395 /* Features */,
@@ -188,7 +241,10 @@
 		4E7D50AD255DA39F0053BC9A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E1EDA852590AAF900396485 /* Transaction History */,
+				4E53E3ED2584791400293391 /* Realm */,
 				4E7D50B8255DA4C30053BC9A /* ProductManager */,
+				4E1EDA812590AA6900396485 /* StorageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,7 +252,6 @@
 		4E7D50AE255DA3AE0053BC9A /* ProductManager */ = {
 			isa = PBXGroup;
 			children = (
-				4EC161FB2563A1AA0006C712 /* ProductDetail */,
 				4E1B893525627A000004CABC /* AddNewProduct */,
 				4E7D50B3255DA41C0053BC9A /* Cell */,
 				4E7D50AF255DA3F70053BC9A /* ProductManagerScreen.swift */,
@@ -257,12 +312,12 @@
 			path = Product;
 			sourceTree = "<group>";
 		};
-		4EC161FB2563A1AA0006C712 /* ProductDetail */ = {
+		4ECC677E25B41F3A00E0F2A3 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				4EC161FC2563A1BE0006C712 /* ProductDetailScreen.swift */,
+				4ECC677F25B41F4B00E0F2A3 /* BaseView.swift */,
 			);
-			path = ProductDetail;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		4EDFBB432582161600F5FBE1 /* Base */ = {
@@ -271,6 +326,22 @@
 				4EDFBB442582162400F5FBE1 /* BaseViewModel.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		4EF413B02596FFF600EE3F93 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4EF413B12597000B00EE3F93 /* TransactionHistoryItem.swift */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		4EF413B7259703E200EE3F93 /* Transaction Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4EF413B82597040100EE3F93 /* TransactionDetailView.swift */,
+			);
+			path = "Transaction Detail";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,16 +478,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E6FAB80257F21510097C395 /* Spinner.swift in Sources */,
-				4EC161FD2563A1BE0006C712 /* ProductDetailScreen.swift in Sources */,
 				4E7D50BA255DA4DB0053BC9A /* ProductItemModel.swift in Sources */,
 				4EDFBB452582162400F5FBE1 /* BaseViewModel.swift in Sources */,
 				4EB76E9C256192A600B1A8B7 /* IncreaseQuantityButton.swift in Sources */,
+				4E53E3EF2584792A00293391 /* RealmStore.swift in Sources */,
+				4E1EDA872590AB1200396485 /* TransactionHistoryItemModel.swift in Sources */,
+				4EF413B92597040100EE3F93 /* TransactionDetailView.swift in Sources */,
 				4E5F9B1E25800193007EE996 /* ProductManagerViewModel.swift in Sources */,
+				4ECC678025B41F4B00E0F2A3 /* BaseView.swift in Sources */,
+				4EF413B22597000B00EE3F93 /* TransactionHistoryItem.swift in Sources */,
 				4E1B893725627A150004CABC /* AddNewProduct.swift in Sources */,
 				4E7D50A9255DA2AF0053BC9A /* BottomNavigationBar.swift in Sources */,
+				4E1EDA822590AA6900396485 /* StorageModel.swift in Sources */,
 				4EDFBB412582160600F5FBE1 /* AddNewProductViewModel.swift in Sources */,
 				4E7D50B5255DA4320053BC9A /* ProductItemCell.swift in Sources */,
 				4E7D50B0255DA3F70053BC9A /* ProductManagerScreen.swift in Sources */,
+				4E1EDA7B2590A14B00396485 /* PurchaseHistoryView.swift in Sources */,
+				4E1EDA7E2590A22C00396485 /* PurchaseHistoryViewModel.swift in Sources */,
 				4E1B893C256283CF0004CABC /* LogInView.swift in Sources */,
 				4EB76E9525618E1300B1A8B7 /* View+Extension.swift in Sources */,
 				4E7D5095255DA0CA0053BC9A /* ShopManagerApp.swift in Sources */,
@@ -548,9 +626,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShopManager/ShopManager.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ShopManager/Preview Content\"";
-				DEVELOPMENT_TEAM = 8U9S9DB94G;
+				DEVELOPMENT_TEAM = 2L86BZPCC6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ShopManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -558,8 +638,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Hatk.shopManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shopManager.hatk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -571,9 +652,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShopManager/ShopManager.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ShopManager/Preview Content\"";
-				DEVELOPMENT_TEAM = 8U9S9DB94G;
+				DEVELOPMENT_TEAM = 2L86BZPCC6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ShopManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -581,8 +664,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Hatk.shopManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shopManager.hatk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -656,9 +740,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShopManager/ShopManager.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ShopManager/Preview Content\"";
-				DEVELOPMENT_TEAM = 8U9S9DB94G;
+				DEVELOPMENT_TEAM = 2L86BZPCC6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ShopManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -666,8 +752,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Hatk.shopManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shopManager.hatk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -741,9 +828,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShopManager/ShopManager.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ShopManager/Preview Content\"";
-				DEVELOPMENT_TEAM = 8U9S9DB94G;
+				DEVELOPMENT_TEAM = 2L86BZPCC6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ShopManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -751,8 +840,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Hatk.shopManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shopManager.hatk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -820,9 +910,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShopManager/ShopManager.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ShopManager/Preview Content\"";
-				DEVELOPMENT_TEAM = 8U9S9DB94G;
+				DEVELOPMENT_TEAM = 2L86BZPCC6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ShopManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -830,8 +922,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Hatk.shopManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shopManager.hatk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -899,9 +992,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShopManager/ShopManager.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ShopManager/Preview Content\"";
-				DEVELOPMENT_TEAM = 8U9S9DB94G;
+				DEVELOPMENT_TEAM = 2L86BZPCC6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ShopManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -909,8 +1004,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Hatk.shopManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shopManager.hatk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

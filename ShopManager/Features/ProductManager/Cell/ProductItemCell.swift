@@ -10,7 +10,6 @@ import SwiftUI
 struct ProductItemCell: View {
     
     @ObservedObject var productItemModel: ProductItemModel
-    
     init(model: ProductItemModel) {
         self.productItemModel = model
     }
@@ -18,17 +17,13 @@ struct ProductItemCell: View {
     
     var body: some View {
         Group {
-            if (shouldShowIncreaseButton()) {
-                VStack(alignment: HorizontalAlignment.leading) {
-                    nameView
-                    descriptionView
-                    originalPriceView
-                    IncreaseQuantityButton(countNumber: self.productItemModel.count ) { (value) in
-                        self.productItemModel.setCount(count: value)
-                    }
-                    }
-            } else {
-                EmptyView()
+            VStack(alignment: HorizontalAlignment.leading) {
+                nameView
+                descriptionView
+                originalPriceView
+                IncreaseQuantityButton(countNumber: self.productItemModel.count ) { (value) in
+                    self.productItemModel.setCount(count: value)
+                }
             }
         }
     }
@@ -66,9 +61,5 @@ struct ProductItemCell: View {
                     .lineLimit(1)
             }
         }
-    }
-    
-    func shouldShowIncreaseButton() -> Bool {
-        return !((self.productItemModel.getOriginalPrice().isEmpty) && ((self.productItemModel.productDescription.isEmpty) == nil) && ((self.productItemModel.productName.isEmpty) == nil))
     }
 }
